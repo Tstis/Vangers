@@ -34,6 +34,10 @@
 #define iSTR_DISK_SPACE_IN_USE		$iSTR_DISK_SPACE_IN_USE1
 #define iSTR_CLEAN_UP			$iSTR_CLEAN_UP1
 
+#define iSTR_CYCLE_DOBA			$iSTR_CYCLE_DOBA1
+
+#define iSTR_CYCLE_DOBA_OLD2				"OLD"
+#define iSTR_CYCLE_DOBA_OLD2				"СТАРЫЕ"
 #define iSTR_Sound_Options		$iSTR_Sound_Options1
 #define iSTR_SOUND_EFFECTS		$iSTR_SOUND_EFFECTS1
 #define iSTR_MUSIC			$iSTR_MUSIC1

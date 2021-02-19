@@ -34,6 +34,8 @@
 #define iSTR_DISK_SPACE_IN_USE		$iSTR_DISK_SPACE_IN_USE2
 #define iSTR_CLEAN_UP			$iSTR_CLEAN_UP2
 
+#define iSTR_CYCLE_DOBA			$iSTR_CYCLE_DOBA2
+
 #define iSTR_Sound_Options		$iSTR_Sound_Options2
 #define iSTR_SOUND_EFFECTS		$iSTR_SOUND_EFFECTS2
 #define iSTR_MUSIC			$iSTR_MUSIC2

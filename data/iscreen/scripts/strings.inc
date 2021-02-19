@@ -23,7 +23,7 @@
 #define iSTR_OPTIONS2			"НАСТРОЙКИ"
 
 #define iSTR_CREDITS1			"CREDITS"
-#define iSTR_CREDITS2			"АВТОРЫ"
+#define iSTR_CREDITS2			"О СОЗДАТЕЛЯХ"
 
 #define iSTR_EXIT1			"EXIT"
 #define iSTR_EXIT2			"ВЫХОД"
@@ -104,6 +104,8 @@
 #define iSTR_CLEAN_UP1			"CLEAN UP!"
 #define iSTR_CLEAN_UP2			"ОСВОБОДИТЬ!"
 
+#define iSTR_CYCLE_DOBA1				"DOBA CYCLES:"
+#define iSTR_CYCLE_DOBA2				"ЦИКЛЫ ДОБЫ:"
 
 #define iSTR_Sound_Options1		"Sound Options"
 #define iSTR_Sound_Options2		"Настройка звука"
@@ -133,19 +135,19 @@
 #define iSTR_Controls2			"Управление"
 
 #define iSTR_Movement1			"Basic Controls"
-#define iSTR_Movement2			"Базовое управление"
+#define iSTR_Movement2			"БАЗОВОЕ УПРАВЛЕНИЕ"
 
 #define iSTR_Utility1			"Extended Movement"
-#define iSTR_Utility2			"Расширенное управление"
+#define iSTR_Utility2			"РАСШИРЕННОЕ УПРАВЛЕНИЕ"
 
 #define iSTR_Combat1			"Combat"
-#define iSTR_Combat2			"Бой"
+#define iSTR_Combat2			"БОЙ"
 
 #define iSTR_Camera1			"Camera Controls"
-#define iSTR_Camera2			"Камера"
+#define iSTR_Camera2			"КАМЕРА"
 
 #define iSTR_MultiplayerAndMisc1			"Multiplayer and misc."
-#define iSTR_MultiplayerAndMisc2			"Сетевая игра и другое"
+#define iSTR_MultiplayerAndMisc2			"СЕТЕВАЯ ИГРА И ИНОЕ"
 
 #define iSTR_TO_MENU1			"TO MENU"
 #define iSTR_TO_MENU2			"В МЕНЮ"
@@ -166,7 +168,7 @@
 #define iSTR_SERVER_PORT2		"ПОРТ СЕРВЕРА"
 
 #define iSTR_Default1			"RESTORE"
-#define iSTR_Default2			"ВОСТАНОВИТЬ"
+#define iSTR_Default2			"ВОССТАНОВИТЬ"
 
 #define iSTR_Server_Port1		"Server Port:"
 #define iSTR_Server_Port2		"Порт сервера:"
@@ -182,7 +184,7 @@
 #define iSTR_INTERNET2			"ИНТЕРНЕТ"
 
 #define iSTR_CANT_CREATE1		"Can't create server..."
-#define iSTR_CANT_CREATE2		"Невозможно создать сервер..."
+#define iSTR_CANT_CREATE2		"Ошибка, слепок повреждён..."
 
 
 #define iSTR_LAN_Servers1		"LAN Servers"
@@ -198,10 +200,10 @@
 #define iSTR_Update_List2		"Обновить Список"
 
 #define iSTR_Searching_Servers1 	"Searching Servers"
-#define iSTR_Searching_Servers2 	"Поиск Серверов"
+#define iSTR_Searching_Servers2 	"ИЩЕМ СЕРВЕРА ЧЕРЕЗ ЛИНЗУ"
 
 #define iSTR_Please_wait1		"Please wait"
-#define iSTR_Please_wait2		"Ждите"
+#define iSTR_Please_wait2		"Ждите соеднинения"
 
 
 #define iSTR_Player_Settings1		"Player Settings"
@@ -223,7 +225,7 @@
 #define iSTR_BLUE2			"СИНИЙ"
 
 #define iSTR_GREEN1			"GREEN"
-#define iSTR_GREEN2			"ЗЕЛЕНЫЙ"
+#define iSTR_GREEN2			"ЗЕЛЁНЫЙ"
 
 #define iSTR_RED1			"RED"
 #define iSTR_RED2			"КРАСНЫЙ"
@@ -317,7 +319,7 @@
 #define iSTR_Poponka2			"Попонка"
 
 #define iSTR_One_at_a_time1		"One at a time:"
-#define iSTR_One_at_a_time2		"Сколько штук за раз:"
+#define iSTR_One_at_a_time2		"Максимум за раз:"
 
 #define iSTR_Checkpoints_Number1	"Checkpoints Number:"
 #define iSTR_Checkpoints_Number2	"Число этапов:"
@@ -357,7 +359,7 @@
 #define iSTR_NAME22			"ИМЯ:"
 
 #define iSTR_GAME1			"GAME:"
-#define iSTR_GAME2			"ИГРА:"
+#define iSTR_GAME2			"РЕЖИМ:"
 
 
 #define iSTR_THE_SERVER_HAS_ALREADY1	"THE SERVER HAS ALREADY"
@@ -367,7 +369,7 @@
 #define iSTR_BEEN_CONFIGURED_BY2	"УЖЕ СКОНФИГУРИРОВАН"
 
 #define iSTR_ANOTHER_PLAYER1		"ANOTHER PLAYER!"
-#define iSTR_ANOTHER_PLAYER2		"ДРУГИМ ИГРОКОМ!"
+#define iSTR_ANOTHER_PLAYER2		"ДРУГИМ КОЛЕСНИКОМ!"
 
 #define iSTR_Server_Info1		"Server Info"
 #define iSTR_Server_Info2		"Текущая Игра"
@@ -390,7 +392,7 @@
 #define iSTR_HOST_NAME2 		"ИМЯ СЕРВЕРА:"
 
 #define iSTR_Internet_Servers1		"Internet Servers"
-#define iSTR_Internet_Servers2		"Серверы Интернет"
+#define iSTR_Internet_Servers2		"Сервера в интернете"
 
 
 #define iSTR_Game_Results1		"Game Results"
@@ -425,7 +427,7 @@
 #define iSTR_ACHTUNG2			"ВНИМАНИЕ"
 
 #define iSTR_VANGERS_APPROACHING1	"VANGERS APPROACHING"
-#define iSTR_VANGERS_APPROACHING2	"СОЕДИНЯЕМ С ВАШИМ ВАНГЕРОМ"
+#define iSTR_VANGERS_APPROACHING2	"Соеденяем с вашим Вангером"
 
 
 #define iSTR_Genesis1			"Genesis"
@@ -626,7 +628,7 @@
 #define iSTR_MaxTime2			"Время:"
 
 #define iSTR_MaxKills1			"Max Kills:"
-#define iSTR_MaxKills2			"Максимум побед:"
+#define iSTR_MaxKills2			"Убийств нужно:"
 
 #define iSTR_GameInfo1		"CURRENT GAME"
 #define iSTR_GameInfo2		"ТЕКУЩАЯ ИГРА"
