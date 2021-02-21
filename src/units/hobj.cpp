@@ -1189,6 +1189,7 @@ void GameObjectDispatcher::Quant(void)
 	VangerUnit* p;
 	int i;
 
+	int time;
 	if(TurnAngle == 0 && DepthShow == 0) AdvancedView = 0;
 	else AdvancedView = 1;
 
@@ -1225,6 +1226,9 @@ void GameObjectDispatcher::Quant(void)
 					break;
 				};	
 		};
+	}
+	else {
+		time = GLOBAL_CLOCK();
 	}
 
 #ifdef _DEBUG
