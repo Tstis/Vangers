@@ -120,6 +120,13 @@ extern char* aciSTR_PutThis;
 
 extern int aciItmTextQueueSize;
 
+extern char* aciSTR_RESTRICTIONS;
+extern char* aciSTR_STATISTICS;
+
+extern char* aciSTR_KILLS_NEED;
+extern char* aciSTR_MINUTES;
+extern char* aciSTR_OAAT;
+
 /* --------------------------- PROTOTYPE SECTION ---------------------------- */
 
 void aciWorldExploredInfo(void);

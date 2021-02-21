@@ -1197,7 +1197,7 @@ Screen "Avtors screen"
 
 			font		1
 			null_level	$DEFAULT_NULL
-			string		"АВТОРЫ МОДА"
+			string		"АВТОРЫ СЛЕПКА"
 		}
 	}
 	
@@ -1229,7 +1229,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"Создатель мода"
+			string		"Инф-Создатель"
 		}
 	}
 	
@@ -1261,7 +1261,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"Огромная помощь в работе с кодом"
+			string		"Огромная помощь в работе с инф-кодом"
 		}
 	}
 	
@@ -1293,7 +1293,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"Не менее огромная помощь в коде"
+			string		"Не менее огромная помощь в инф-коде"
 		}
 	}
 
@@ -11691,21 +11691,7 @@ Screen "INet Host screen"
 				start_time	$PRESS_OBJ_TIME
 				time		$MOVE2SCREEN_TIME
 			}
-			EvComm {
-				ext_event	$iEXT_INIT_iSERVERS_LIST	 0
-				start_time	1
-			}
-			EvComm {
-				ext_event	$iEXT_UPDATE_iSERVERS_LIST 0
-				start_time	{ $PRESS_OBJ_TIME + $MOVE2SCREEN_TIME + 1 }
-			}
-			EvComm {
-				move2screen	"Port screen"
-				start_time	{ $PRESS_OBJ_TIME + $MOVE2SCREEN_TIME + 2 }
-				time		$MOVE2SCREEN_TIME
-			}
 		}
-
 		Event {
 			key $VK_RBUTTON
 
@@ -11723,19 +11709,6 @@ Screen "INet Host screen"
 			EvComm {
 				move2screen	"Port screen"
 				start_time	{ $SMOOTH_OBJ_TIME + $HIDE_OBJ_TIME }
-				time		$MOVE2SCREEN_TIME
-			}
-			EvComm {
-				ext_event	$iEXT_INIT_iSERVERS_LIST	 0
-				start_time	1
-			}
-			EvComm {
-				ext_event	$iEXT_UPDATE_iSERVERS_LIST 0
-				start_time	{ $SMOOTH_OBJ_TIME + $HIDE_OBJ_TIME + $MOVE2SCREEN_TIME + 1 }
-			}
-			EvComm {
-				move2screen	"Port screen"
-				start_time	{ $SMOOTH_OBJ_TIME + $HIDE_OBJ_TIME + $MOVE2SCREEN_TIME + 2 }
 				time		$MOVE2SCREEN_TIME
 			}
 		}

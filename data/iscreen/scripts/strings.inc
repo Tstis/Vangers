@@ -165,7 +165,7 @@
 #define iSTR_PLAYER_SETUP2		"НАСТРОИТЬ ИГРОКА"
 
 #define iSTR_SERVER_PORT1		"SET SERVER PORT"
-#define iSTR_SERVER_PORT2		"ПОРТ СЕРВЕРА"
+#define iSTR_SERVER_PORT2		"ПОРТ"
 
 #define iSTR_Default1			"RESTORE"
 #define iSTR_Default2			"ВОССТАНОВИТЬ"
@@ -180,8 +180,8 @@
 #define iSTR_LAN1			"LAN"
 #define iSTR_LAN2			"ЛОКАЛЬНАЯ СЕТЬ"
 
-#define iSTR_INTERNET1			"INTERNET"
-#define iSTR_INTERNET2			"ИНТЕРНЕТ"
+#define iSTR_INTERNET1			"Search"
+#define iSTR_INTERNET2			"Поиск сервера"
 
 #define iSTR_CANT_CREATE1		"Can't create server..."
 #define iSTR_CANT_CREATE2		"Ошибка, слепок повреждён..."
@@ -197,10 +197,10 @@
 #define iSTR_DOWN2			"ВНИЗ"
 
 #define iSTR_Update_List1		"Update List"
-#define iSTR_Update_List2		"Обновить Список"
+#define iSTR_Update_List2		"Обновить список"
 
 #define iSTR_Searching_Servers1 	"Searching Servers"
-#define iSTR_Searching_Servers2 	"ИЩЕМ СЕРВЕРА ЧЕРЕЗ ЛИНЗУ"
+#define iSTR_Searching_Servers2 	"ПОИСК СЕРВЕРОВ ЧЕРЕЗ ЛИНЗУ"
 
 #define iSTR_Please_wait1		"Please wait"
 #define iSTR_Please_wait2		"Ждите соеднинения"
@@ -300,26 +300,26 @@
 #define iSTR_World1			"World:"
 #define iSTR_World2			"Мир:"
 
-#define iSTR_Nymbos1			"Nymbos"
-#define iSTR_Nymbos2			"Нимбос"
+#define iSTR_Nymbos1			"Nymbos:"
+#define iSTR_Nymbos2			"Нимбос:"
 
-#define iSTR_Heroin1			"Heroin"
-#define iSTR_Heroin2			"Героин"
+#define iSTR_Heroin1			"Heroin:"
+#define iSTR_Heroin2			"Героин:"
 
-#define iSTR_Toxick1			"Toxick"
-#define iSTR_Toxick2			"Токсик"
+#define iSTR_Toxick1			"Toxick:"
+#define iSTR_Toxick2			"Токсик:"
 
 #define iSTR_Phlegma1			"Phlegma"
-#define iSTR_Phlegma2			"Флегма"
+#define iSTR_Phlegma2			"Флегма:"
 
-#define iSTR_Shrub1			"Shrub"
-#define iSTR_Shrub2			"Куст"
+#define iSTR_Shrub1			"Shrub:"
+#define iSTR_Shrub2			"Куст:"
 
-#define iSTR_Poponka1			"Poponka"
-#define iSTR_Poponka2			"Попонка"
+#define iSTR_Poponka1			"Poponka:"
+#define iSTR_Poponka2			"Попонка:"
 
 #define iSTR_One_at_a_time1		"One at a time:"
-#define iSTR_One_at_a_time2		"Максимум за раз:"
+#define iSTR_One_at_a_time2		"Максимум товара за раз:"
 
 #define iSTR_Checkpoints_Number1	"Checkpoints Number:"
 #define iSTR_Checkpoints_Number2	"Число этапов:"
@@ -388,11 +388,11 @@
 #define iSTR_SERVER_INFO2		"НАЗАД"
 
 
-#define iSTR_HOST_NAME1 		"HOST NAME:"
-#define iSTR_HOST_NAME2 		"ИМЯ СЕРВЕРА:"
+#define iSTR_HOST_NAME1 		"NAME:"
+#define iSTR_HOST_NAME2 		"СЕРВЕР:"
 
-#define iSTR_Internet_Servers1		"Internet Servers"
-#define iSTR_Internet_Servers2		"Сервера в интернете"
+#define iSTR_Internet_Servers1		"Servers"
+#define iSTR_Internet_Servers2		"Доступные сервера"
 
 
 #define iSTR_Game_Results1		"Game Results"
@@ -501,7 +501,7 @@
 #define iSTR_Fire_weapon_42		"Запуск терминатора"
 
 #define iSTR_Full_screen1		"Toggle UI"
-#define iSTR_Full_screen2		"Откл./вкл. интерфейс"
+#define iSTR_Full_screen2		"Показ интерфейса"
 
 #define iSTR_Reduce_view1		"Reduce View"
 #define iSTR_Reduce_view2		"Уменьшить обзор"
@@ -628,7 +628,7 @@
 #define iSTR_MaxTime2			"Время:"
 
 #define iSTR_MaxKills1			"Max Kills:"
-#define iSTR_MaxKills2			"Убийств нужно:"
+#define iSTR_MaxKills2			"Убийств для победы:"
 
 #define iSTR_GameInfo1		"CURRENT GAME"
 #define iSTR_GameInfo2		"ТЕКУЩАЯ ИГРА"
