@@ -159,7 +159,7 @@
 #define iSTR_JOIN_SERVER2		"€‰’ˆ ‘…‚…"
 
 #define iSTR_CREATE_SERVER1		"CREATE SERVER"
-#define iSTR_CREATE_SERVER2		"‘Ž‡„€’œ ‘…‚…"
+#define iSTR_CREATE_SERVER2		"•Ž‘’"
 
 #define iSTR_PLAYER_SETUP1		"PLAYER SETUP"
 #define iSTR_PLAYER_SETUP2		"€‘’Žˆ’œ ˆƒŽŠ€"
