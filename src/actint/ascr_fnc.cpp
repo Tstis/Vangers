@@ -5736,7 +5736,7 @@ void aciShowFrags(void)
 				p = iPlayers[i];
 				XBuf.init();
 				world_name = aScrDisp -> wMap -> world_ptr[aScrDisp -> wMap -> world_ids[p -> body.world]] -> name;
-				XBuf < p -> name < " (" < world_name < ") : " <= p -> body.kills < " " < aciSTR_KILLS < " " <= p -> body.deaths < " " < aciSTR_DEATHS;
+				XBuf < p -> name < " (" < world_name < ") : " <= p -> body.kills < " " < aciSTR_KILLS < ", " <= p -> body.deaths < " " < aciSTR_DEATHS;
 				aScrDisp -> curPrompt -> add_str(i,(unsigned char*)XBuf.address());
 				aScrDisp -> curPrompt -> TimeBuf[i] = ACI_FRAG_TIMER;
 				aScrDisp -> curPrompt -> ColBuf[i] = fragColors[p -> body.color];
@@ -5748,7 +5748,7 @@ void aciShowFrags(void)
 				XBuf.init();
 				world_name = aScrDisp -> wMap -> world_ptr[aScrDisp -> wMap -> world_ids[p -> body.world]] -> name;
 				XBuf < p -> name < " : " < aciSTR_Ware1 < " " <= p -> body.MechosomaStat.ItemCount1 < "/" <= my_server_data.Mechosoma.ProductQuantity1;
-				XBuf < " " < aciSTR_Ware2 < " " <= p -> body.MechosomaStat.ItemCount2 < "/" <= my_server_data.Mechosoma.ProductQuantity2 < " | " <= p -> body.kills < " " < aciSTR_KILLS < " " <= p -> body.deaths < " " < aciSTR_DEATHS;
+				XBuf < ", " < aciSTR_Ware2 < " " <= p -> body.MechosomaStat.ItemCount2 < "/" <= my_server_data.Mechosoma.ProductQuantity2 < " | " <= p -> body.kills < " " < aciSTR_KILLS < ", " <= p -> body.deaths < " " < aciSTR_DEATHS;
 				aScrDisp -> curPrompt -> add_str(i,(unsigned char*)XBuf.address());
 				aScrDisp -> curPrompt -> TimeBuf[i] = ACI_FRAG_TIMER;
 				aScrDisp -> curPrompt -> ColBuf[i] = fragColors[p -> body.color];
