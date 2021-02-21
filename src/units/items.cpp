@@ -3920,15 +3920,63 @@ void GloryPlace::Init(int ind)
 	//satinan
 	if (NetworkON && my_server_data.GameType == PASSEMBLOSS && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "satinan")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "сатинан")==0)) {
 		World = WORLD_XPLO;
+    if (ind == 0) { R_curr.x = 1650;    R_curr.y =  815; World = WORLD_GLORX; }
+    else {
+      switch (ind % 2) {
+        case 1:
+          switch(RND(4)) {
+            case  0:  R_curr.x = 1650;  R_curr.y =  310;  break;
+            case  1:  R_curr.x =  170;  R_curr.y =  965;  break;
+            case  2:  R_curr.x = 1230;  R_curr.y = 1175;  break;
+            case  3:  R_curr.x = 1018;  R_curr.y =  606;  break;
+          }
+          break;
+        case 0:  R_curr.x = 1650;  R_curr.y =  815;  break;
+      }
+    }
+    return;
+	}
+	
+	//triacxlon
+	if (NetworkON && my_server_data.GameType == PASSEMBLOSS && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "triacxlon")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "триацхлон")==0)) {
+		World = WORLD_THREALL;
 		switch (ind) {
-			case  0:	R_curr.x = 1650;    R_curr.y =  815; World = WORLD_GLORX;	break;
-			default:
-				switch(RND(4)) {
-					case  0:	R_curr.x = 1650;	R_curr.y =  310;	break;
-					case  1:	R_curr.x =  170;	R_curr.y =  965;	break;
-					case  2:	R_curr.x = 1230;	R_curr.y = 1175;	break;
-					case  3:	R_curr.x = 1018;	R_curr.y =  606;	break;
-				}
+		case  0:	R_curr.x = 1358;	R_curr.y = 7036;	World = WORLD_GLORX;	break;
+		case  1:	R_curr.x =  390;	R_curr.y = 1266;	World = WORLD_KHOX;		break;
+		case  2:	R_curr.x = 1858;	R_curr.y = 1849;	World = WORLD_KHOX;		break;
+		case  3:	R_curr.x = 1869;	R_curr.y =  232;	World = WORLD_KHOX;		break;
+		case  4:	R_curr.x =  696;	R_curr.y =   86;	World = WORLD_KHOX;		break;
+		case  5:	R_curr.x = 1145;	R_curr.y = 1210;	World = WORLD_KHOX;		break;
+		case  6:	R_curr.x = 1987;	R_curr.y = 1043;	World = WORLD_KHOX;		break;
+		case  7:	R_curr.x = 2021;	R_curr.y =    8;	World = WORLD_KHOX;		break;
+		case  8:	R_curr.x =  150;	R_curr.y =  378;	World = WORLD_KHOX;		break;
+		case  9:	R_curr.x =  910;	R_curr.y = 2014;	World = WORLD_KHOX;		break;
+		case 10:	R_curr.x = 1232;	R_curr.y =  717;	World = WORLD_KHOX;		break;
+		case 11:	R_curr.x =  307;	R_curr.y =  385;	World = WORLD_KHOX;		break;
+		case 12:	R_curr.x = 1341;	R_curr.y = 5971;	World = WORLD_GLORX;	break;
+		case 13:	R_curr.x =  486;	R_curr.y = 5648;	World = WORLD_GLORX;	break;
+		case 14:	R_curr.x = 1607;	R_curr.y = 6315;	World = WORLD_GLORX;	break;
+		case 15:	R_curr.x =   80;	R_curr.y = 7281;	World = WORLD_GLORX;	break;
+		case 16:	R_curr.x = 1341;	R_curr.y = 5971;	World = WORLD_GLORX;	break;
+		case 17:	R_curr.x =  486;	R_curr.y = 5648;	World = WORLD_GLORX;	break;
+		case 18:	R_curr.x = 1607;	R_curr.y = 6315;	World = WORLD_GLORX;	break;
+		case 19:	R_curr.x =   80;	R_curr.y = 7281;	World = WORLD_GLORX;	break;
+		case 20:	R_curr.x = 625;		R_curr.y = 1293;	World = WORLD_BOOZEENA;		break;
+		case 21:	R_curr.x =1048;		R_curr.y = 1632;	World = WORLD_BOOZEENA;		break;
+		case 22:	R_curr.x =1042;		R_curr.y = 1799;	World = WORLD_BOOZEENA;		break;
+		case 23:	R_curr.x = 625;		R_curr.y = 1293;	World = WORLD_BOOZEENA;		break;
+		case 24:	R_curr.x = 785;		R_curr.y =   30;	World = WORLD_BOOZEENA;		break;
+		case 25:	R_curr.x = 625;		R_curr.y = 1293;	World = WORLD_BOOZEENA;		break;
+		case 26:	R_curr.x = 287;		R_curr.y = 1870;	World = WORLD_BOOZEENA;		break;
+		case 27:	R_curr.x = 305;		R_curr.y = 1491;	World = WORLD_BOOZEENA;		break;
+		case 28:	R_curr.x = 287;		R_curr.y = 1870;	World = WORLD_BOOZEENA;		break;
+		case 29:	R_curr.x =  318;	R_curr.y =    4;	World = WORLD_ARKONOY;		break;
+		case 30:	R_curr.x =  411;	R_curr.y =  645;	World = WORLD_ARKONOY;		break;
+		case 31:	R_curr.x = 1525;	R_curr.y = 1494;	World = WORLD_ARKONOY;		break;
+		case 32:	R_curr.x = 1860;	R_curr.y =    0;	break;
+		case 33:	R_curr.x = 1648;	R_curr.y = 1510;	break;
+		case 34:	R_curr.x = 1232;	R_curr.y =  139;	break;
+		case 35:	R_curr.x = 1482;	R_curr.y = 1637;	break;
 		}
 		return;
 	}
