@@ -112,3 +112,22 @@
 #define aciSTR_PutThis1 		"Put this"
 #define aciSTR_PutThis2 		"Положить"
 
+//Van-War game restrictions
+#define aciSTR_RESTRICTIONS1	"Game restrictions"
+#define aciSTR_RESTRICTIONS2	"ОГРАНИЧЕНИЯ ИГРЫ"
+
+//Van-War statistics
+#define aciSTR_STATISTICS1		"Statistics"
+#define aciSTR_STATISTICS2		"ИНФ-СТАТИСТИКА"
+
+//Van-War kills for statistics 
+#define aciSTR_KILLS_NEED1		"kills:"
+#define aciSTR_KILLS_NEED2		"убийств:"
+
+//Van-War time for statistics 
+#define aciSTR_MINUTES1		"minutes:"
+#define aciSTR_MINUTES2		"минут:"
+
+//Mechosoma one at a time for statistics 
+#define aciSTR_OAAT1		"one at a time:"
+#define aciSTR_OAAT2		"максимум товара за раз:"
