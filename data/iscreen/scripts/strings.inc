@@ -135,19 +135,19 @@
 #define iSTR_Controls2			"Управление"
 
 #define iSTR_Movement1			"Basic Controls"
-#define iSTR_Movement2			"БАЗОВОЕ УПРАВЛЕНИЕ"
+#define iSTR_Movement2			"Базовое управление"
 
 #define iSTR_Utility1			"Extended Movement"
-#define iSTR_Utility2			"РАСШИРЕННОЕ УПРАВЛЕНИЕ"
+#define iSTR_Utility2			"Расширенное управление"
 
 #define iSTR_Combat1			"Combat"
-#define iSTR_Combat2			"БОЙ"
+#define iSTR_Combat2			"Бой"
 
 #define iSTR_Camera1			"Camera Controls"
-#define iSTR_Camera2			"КАМЕРА"
+#define iSTR_Camera2			"Камера"
 
 #define iSTR_MultiplayerAndMisc1			"Multiplayer and misc."
-#define iSTR_MultiplayerAndMisc2			"СЕТЕВАЯ ИГРА И ИНОЕ"
+#define iSTR_MultiplayerAndMisc2			"Сетевая игра и Иное"
 
 #define iSTR_TO_MENU1			"TO MENU"
 #define iSTR_TO_MENU2			"В МЕНЮ"
@@ -247,7 +247,7 @@
 
 
 #define iSTR_Connection_failed1 	"Connection failed"
-#define iSTR_Connection_failed2 	"Сбой подключения"
+#define iSTR_Connection_failed2 	"Сбой соединения"
 
 #define iSTR_OK1			"OK"
 #define iSTR_OK2			"ОК"
@@ -385,7 +385,7 @@
 #define iSTR_Chat_Room2 		"Чат"
 
 #define iSTR_SERVER_INFO1		"SERVER INFO"
-#define iSTR_SERVER_INFO2		"ТЕКУЩАЯ ИГРА"
+#define iSTR_SERVER_INFO2		"НАЗАД"
 
 
 #define iSTR_HOST_NAME1 		"HOST NAME:"
