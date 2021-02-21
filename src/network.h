@@ -121,6 +121,8 @@ struct MessageDispatcher : XList {
 	void send(char* message,int mode,int parameter);
 	void receive();
 	};
+	
+	const char bot_tag[6] = "[bot]";
 
 /*******************************************************************************
 			Top List

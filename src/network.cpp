@@ -1314,11 +1314,34 @@ void PlayersList::parsing_total_body_query()
 *******************************************************************************/
 MessageElement::MessageElement(const char* player_name, char* msg,int col)
 {
-	message = new char[strlen(player_name) + strlen(msg) + 3];
-	strcpy(message,player_name);
+    char *name, *actual_msg;
+    int actual_col;
+    if (strncmp(msg, bot_tag, 5)==0) {
+        name = (char*)"$";
+        actual_msg = msg + 5;
+        actual_col = 1;
+	} else if (strcmp(msg, "/z")==0) {
+		name = (char*)"ˆ­ä-¥à¥ª«¨çª ";
+		actual_msg = (char*)"////// ……Š‹ˆ—Š€! //////";
+		actual_col = 1;
+	} else if (strcmp(msg, "/s")==0) {
+		name = (char*)"ˆ­ä-‘â àâ¥à";
+		actual_msg = (char*)"////// ‘’€’!!! //////";
+		actual_col = 1;
+	} else if (strcmp(msg, "/swd")==0) {
+		name = (char*)"[W]DimON";
+		actual_msg = (char*)"‘’€€€€€€€€€€€€€€€€€€€€€€’";
+		actual_col = 2;
+    } else {
+        name = (char*)player_name;
+        actual_msg = msg;
+        actual_col = col;
+    }
+	message = new char[strlen(name) + strlen(actual_msg) + 3];
+	strcpy(message,name);
 	strcat(message,": ");
-	strcat(message,msg);
-	color = col;
+	strcat(message,actual_msg);
+	color = actual_col;
 	//zmod
     time = SDL_GetTicks();
 }
