@@ -164,7 +164,7 @@
 #define iSTR_PLAYER_SETUP1		"PLAYER SETUP"
 #define iSTR_PLAYER_SETUP2		"€‘’’ ƒ€"
 
-#define iSTR_SERVER_PORT1		"SET SERVER PORT"
+#define iSTR_SERVER_PORT1		"PORT"
 #define iSTR_SERVER_PORT2		"’"
 
 #define iSTR_Default1			"RESTORE"
@@ -243,7 +243,7 @@
 #define iSTR_CAMOUFLAGE2			"€“”‹†"
 
 #define iSTR_PATROL1			"PATROL"
-#define iSTR_PATROL2			"€’“‹›‰"
+#define iSTR_PATROL2			"€’“‹"
 
 
 #define iSTR_Connection_failed1 	"Connection failed"
@@ -389,9 +389,9 @@
 
 
 #define iSTR_HOST_NAME1 		"NAME:"
-#define iSTR_HOST_NAME2 		"‘…‚…:"
+#define iSTR_HOST_NAME2 		"€„…‘ ‘…‚…€:"
 
-#define iSTR_Internet_Servers1		"Servers"
+#define iSTR_Internet_Servers1		"Available servers"
 #define iSTR_Internet_Servers2		"„®αβγ―­λ¥ α¥ΰΆ¥ΰ "
 
 

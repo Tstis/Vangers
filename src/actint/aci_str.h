@@ -113,11 +113,11 @@
 #define aciSTR_PutThis2 		"®«®¦¨âì"
 
 //Van-War game restrictions
-#define aciSTR_RESTRICTIONS1	"Game restrictions"
+#define aciSTR_RESTRICTIONS1	"GAME RESTRICTIONS"
 #define aciSTR_RESTRICTIONS2	"ƒ€ˆ—…ˆŸ ˆƒ›"
 
 //Van-War statistics
-#define aciSTR_STATISTICS1		"Statistics"
+#define aciSTR_STATISTICS1		"INF-STATISTICS"
 #define aciSTR_STATISTICS2		"ˆ”-‘’€’ˆ‘’ˆŠ€"
 
 //Van-War kills for statistics 
