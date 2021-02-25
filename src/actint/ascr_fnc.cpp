@@ -4813,13 +4813,13 @@ aciPromptData::aciPromptData(int size)
 void aciPromptData::alloc_mem(int size)
 {
 	int i;
-	NumStr = size + 4;
-	StrBuf = new unsigned char*[size + 4];
-	TimeBuf = new int[size + 4];
-	PosX = new int[size + 4];
-	PosY = new int[size + 4];
-	ColBuf = new unsigned int[size + 4];
-	for(i = 0; i < size + 4; i ++) {
+	NumStr = size;
+	StrBuf = new unsigned char*[size];
+	TimeBuf = new int[size];
+	PosX = new int[size];
+	PosY = new int[size];
+	ColBuf = new unsigned int[size];
+	for(i = 0; i < size; i ++){
 		StrBuf[i] = NULL;
 		TimeBuf[i] = 0;
 		ColBuf[i] = 0;
@@ -5701,6 +5701,8 @@ void aciLoadUVSList(XStream& fh,uvsActInt** p,int list_type)
 	*p = (uvsActInt*)el;
 }
 
+#define ACI_FRAG_ADDITIONAL_LINES_PASS 	1
+#define ACI_FRAG_ADDITIONAL_LINES 	4
 #define ACI_FRAG_TIMER		300
 #define ACI_FRAG_FONT		0
 
@@ -5733,6 +5735,8 @@ void aciShowFrags(void)
 	iSortPlayers(1);
 
 	num = iNumPlayers;
+	if (iCurMultiGame == 0 || iCurMultiGame == 1) num += ACI_FRAG_ADDITIONAL_LINES; //Van-War and Mechosoma
+	if (iCurMultiGame == 2) num += ACI_FRAG_ADDITIONAL_LINES_PASS; //Passemploss
 	aScrDisp -> curPrompt -> alloc_mem(num);
 	aScrDisp -> curPrompt -> CurTimer = 0;
 
@@ -5741,7 +5745,7 @@ void aciShowFrags(void)
 	switch(iCurMultiGame){
 		case 0: // VAN-WAR...
 		
-			for (i = 0; i < 4; i++) {
+			for (i = 0; i < ACI_FRAG_ADDITIONAL_LINES; i++) {
 				XBuf.init();
 				switch (i) {
 					case 0: XBuf < aciSTR_RESTRICTIONS; break;
@@ -5753,9 +5757,9 @@ void aciShowFrags(void)
 				aScrDisp -> curPrompt -> add_str(i, (unsigned char*)XBuf.address());
 				aScrDisp -> curPrompt -> TimeBuf[i] = ACI_FRAG_TIMER;
 				aScrDisp -> curPrompt -> ColBuf[i] = fragColors[1];
+				
 			}
-			
-			for(i = 0; i < num; i ++){
+			for(i = 0; i < num - ACI_FRAG_ADDITIONAL_LINES; i ++){
 				p = iPlayers[i];
 				XBuf.init();
 				world_name = aScrDisp -> wMap -> world_ptr[aScrDisp -> wMap -> world_ids[p -> body.world]] -> name;
@@ -5767,7 +5771,7 @@ void aciShowFrags(void)
 			break;
 		case 1: // MECHOSOMA...
 			
-			for (i = 0; i < 4; i++) {
+			for (i = 0; i < ACI_FRAG_ADDITIONAL_LINES; i++) {
 				XBuf.init();
 				switch (i) {
 					case 0: XBuf < aciSTR_RESTRICTIONS; break;
@@ -5780,13 +5784,12 @@ void aciShowFrags(void)
 				aScrDisp -> curPrompt -> TimeBuf[i] = ACI_FRAG_TIMER;
 				aScrDisp -> curPrompt -> ColBuf[i] = fragColors[1];
 			}
-
-			for(i = 0; i < num; i ++){
+			for(i = 0; i < num - ACI_FRAG_ADDITIONAL_LINES; i ++){
 				p = iPlayers[i];
 				XBuf.init();
 				world_name = aScrDisp -> wMap -> world_ptr[aScrDisp -> wMap -> world_ids[p -> body.world]] -> name;
 				XBuf < p -> name < " : " < aciSTR_Ware1 < " " <= p -> body.MechosomaStat.ItemCount1 < "/" <= my_server_data.Mechosoma.ProductQuantity1;
-				XBuf < ", " < aciSTR_Ware2 < " " <= p -> body.MechosomaStat.ItemCount2 < "/" <= my_server_data.Mechosoma.ProductQuantity2 < " | " <= p -> body.kills < " " < aciSTR_KILLS < ", " <= p -> body.deaths < " " < aciSTR_DEATHS;
+				XBuf < ", " < aciSTR_Ware2 < " " <= p -> body.MechosomaStat.ItemCount2 < "/" <= my_server_data.Mechosoma.ProductQuantity2 < ", " <= p -> body.kills < " " < aciSTR_KILLS < ", " <= p -> body.deaths < " " < aciSTR_DEATHS;
 				aScrDisp -> curPrompt -> add_str(i+4,(unsigned char*)XBuf.address());
 				aScrDisp -> curPrompt -> TimeBuf[i+4] = ACI_FRAG_TIMER;
 				aScrDisp -> curPrompt -> ColBuf[i+4] = fragColors[p -> body.color];
@@ -5794,7 +5797,7 @@ void aciShowFrags(void)
 			break;
 		case 2: // PASSEMBLOSS...
 		
-			for (i = 0; i < 1; i++) {
+			for (i = 0; i < ACI_FRAG_ADDITIONAL_LINES_PASS; i++) {
 				XBuf.init();
 				switch (i) {
 					case 0: XBuf < aciSTR_STATISTICS; break;
@@ -5804,12 +5807,11 @@ void aciShowFrags(void)
 				aScrDisp -> curPrompt -> TimeBuf[i] = ACI_FRAG_TIMER;
 				aScrDisp -> curPrompt -> ColBuf[i] = fragColors[1];
 			}
-
-			for(i = 0; i < num; i ++){
+			for(i = 0; i < num - ACI_FRAG_ADDITIONAL_LINES_PASS; i ++){
 				p = iPlayers[i];
 				XBuf.init();
 				world_name = aScrDisp -> wMap -> world_ptr[aScrDisp -> wMap -> world_ids[p -> body.world]] -> name;
-				XBuf < p -> name < " (" < world_name < ") : " < aciSTR_Checkpoints < " " <= p -> body.PassemblossStat.CheckpointLighting < "/" <= my_server_data.Passembloss.CheckpointsNumber < " | " <= p -> body.deaths < " " < aciSTR_DEATHS;
+				XBuf < p -> name < " (" < world_name < ") : " < aciSTR_Checkpoints < " " <= p -> body.PassemblossStat.CheckpointLighting < "/" <= my_server_data.Passembloss.CheckpointsNumber < ", " <= p -> body.deaths < " " < aciSTR_DEATHS;
 				aScrDisp -> curPrompt -> add_str(i+1,(unsigned char*)XBuf.address());
 				aScrDisp -> curPrompt -> TimeBuf[i+1] = ACI_FRAG_TIMER;
 				aScrDisp -> curPrompt -> ColBuf[i+1] = fragColors[p -> body.color];
