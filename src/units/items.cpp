@@ -3901,9 +3901,7 @@ void GloryPlace::Init(int ind)
 	if (NetworkON && my_server_data.GameType == PASSEMBLOSS && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "vozvrat")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "возврат")==0)) {
 		World = WORLD_FOSTRAL;
 		switch (ind) {
-			case  0:	R_curr.x =  741;	R_curr.y =  515;	World = WORLD_GLORX;	break;
-			case  1:	R_curr.x =  808;	R_curr.y = 4631;	break;
-			case  2:	R_curr.x =  382;	R_curr.y = 7333;	break;
+			case  0:	R_curr.x =  382;	R_curr.y = 7333;	break;
 		}
 		return;
 	}

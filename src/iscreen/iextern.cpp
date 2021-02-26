@@ -1821,7 +1821,7 @@ void iGetMultiGameParameters(void)
 			if (strcmp(game_name,"shutle fostral")==0 || strcmp(game_name,"челночный фострал")==0) value = iGetMultiGameParameter(iMP_PASSEMBLOSS, iMP_CHECKPOINTS_NUM)*22;
 			if (strcmp(game_name,"lens-one")==0 || strcmp(game_name,"линза одиночная")==0) value = iGetMultiGameParameter(iMP_PASSEMBLOSS, iMP_CHECKPOINTS_NUM) + 1;
 			if (strcmp(game_name,"lens-team")==0 || strcmp(game_name,"линза командная")==0) value = iGetMultiGameParameter(iMP_PASSEMBLOSS, iMP_CHECKPOINTS_NUM) + 1;
-			if (strcmp(game_name,"vozvrat")==0 || strcmp(game_name,"возврат")==0) value = 3;
+			if (strcmp(game_name,"vozvrat")==0 || strcmp(game_name,"возврат")==0) value = 1;
 			if (strcmp(game_name,"among vangers")==0) value = iGetMultiGameParameter(iMP_PASSEMBLOSS, iMP_CHECKPOINTS_NUM) + 1;
 			if (strcmp(game_name,"eleerection-sim")==0 || strcmp(game_name,"элирекция-сим")==0) value = 1;
 			if (strcmp(game_name,"escape")==0 || strcmp(game_name,"побег")==0) value = 1;
