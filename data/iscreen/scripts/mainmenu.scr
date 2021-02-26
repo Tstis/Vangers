@@ -63,8 +63,8 @@
 #define MECHOS_TRG_X		430
 
 // PASSEMBLOSS --- Checkpoints Number
-#define NUM_CHECKS_STR_X	220
-#define NUM_CHECKS_IN_STR_X	570
+#define NUM_CHECKS_STR_X	265
+#define NUM_CHECKS_IN_STR_X	480
 
 // PASSEMBLOSS --- Escave
 #define ESCAVE_BIRTH_STR_X	240
@@ -123,16 +123,16 @@
 #define NEW_GAME_Y		20
 
 #define LOAD_GAME_X		60
-#define LOAD_GAME_Y		160
+#define LOAD_GAME_Y		165
 
 #define OPTIONS_X		160
-#define OPTIONS_Y		240
+#define OPTIONS_Y		245
 
-#define CREDITS_X		30
-#define CREDITS_Y		310
+#define CREDITS_X		80
+#define CREDITS_Y		315
 
 #define MULTIPLAYER_X		230
-#define MULTIPLAYER_Y		90
+#define MULTIPLAYER_Y		95
 
 #define MAIN_FNT		1
 
@@ -1036,13 +1036,13 @@ Object "Multiplayer Option"
 		}
 	}
 	
-		Object "Mname"
+	Object "Mname"
 	{
-		x	115
-		y	395
+		x	$VERSION_NAZVA_X
+		y	$VERSION_NAZVA_Y
 
 		Element STRING {
-			align_x center
+			align_x 	center
 
 			terrain_num	$TERRAIN4
 
@@ -1105,11 +1105,11 @@ Object "Multiplayer Option"
 
 	Object "Mversion"
 	{
-		x	215
-		y	405
+		x	$VERSION_CIFRA_X
+		y	$VERSION_CIFRA_Y
 		
-			Element STRING {
-			align_x center
+		Element STRING {
+			align_x 	center
 
 			terrain_num	$TERRAIN4
 
@@ -1197,7 +1197,7 @@ Screen "Avtors screen"
 
 			font		1
 			null_level	$DEFAULT_NULL
-			string		"АВТОРЫ СЛЕПКА"
+			string		$iSTR_TITLE_AVTORS
 		}
 	}
 	
@@ -1213,7 +1213,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"Tstis[kiv]"
+			string		$iSTR_1_AVTORS
 		}
 	}
 	
@@ -1229,7 +1229,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"Инф-Создатель"
+			string		$iSTR_1b_AVTORS
 		}
 	}
 	
@@ -1245,7 +1245,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"xiada[kiv]"
+			string		$iSTR_2_AVTORS
 		}
 	}
 	
@@ -1261,7 +1261,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"Огромная помощь в работе с инф-кодом"
+			string		$iSTR_2b_AVTORS
 		}
 	}
 	
@@ -1277,7 +1277,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"АИД[kiv]"
+			string		$iSTR_3_AVTORS
 		}
 	}
 	
@@ -1293,7 +1293,7 @@ Screen "Avtors screen"
 
 			font		3
 			null_level	$DEFAULT_NULL
-			string		"Не менее огромная помощь в инф-коде"
+			string		$iSTR_3b_AVTORS
 		}
 	}
 
@@ -7327,7 +7327,7 @@ Screen "Game Params 0"  // VAN-WAR
 			space		$PARAMS_SPACE
 			font		$PARAM_FNT
 			null_level	$DEFAULT_NULL
-			string		"100"
+			string		"90"
 		}
 		Event {
 			key $VK_LBUTTON
@@ -7342,7 +7342,7 @@ Screen "Game Params 0"  // VAN-WAR
 	}
 	Object "MaxKillsStr"
 	{
-		x	{ $Game_Params_0_MaxKillsStr_PosX - 40 }
+		x	$Game_Params_0_MaxKillsStr_PosX
 		y	{ $PARAMS_START_Y + $PARAMS_DELTA_Y * 6 }
 
 		Element STRING {
@@ -7358,7 +7358,7 @@ Screen "Game Params 0"  // VAN-WAR
 	}
 	Object "MaxKillsNumberStr"
 	{
-		x	{ $Game_Params_0_MaxKillsStr_PosX + 275 }
+		x	$Game_Params_0_MaxKillsNumberStr_PosX
 		y	{ $PARAMS_START_Y + $PARAMS_DELTA_Y * 6 }
 
 		not_unlock
@@ -7685,7 +7685,7 @@ Screen "Game Params 1"  // MECHOSOMA
 	}
 	Object "OneTimeStr"
 	{
-		x	{ $Game_Params_1_OneTimeStr_PosX - 35 }
+		x	$Game_Params_1_OneTimeStr_PosX
 		y	{ $PARAMS_START_Y + $PARAMS_DELTA_Y * 5 }
 
 		Element STRING {
@@ -7701,7 +7701,7 @@ Screen "Game Params 1"  // MECHOSOMA
 	}
 	Object "OneTimeNum"
 	{
-		x	{ $Game_Params_1_OneTimeNum_PosX + 10 }
+		x	$Game_Params_1_OneTimeNum_PosX
 		y	{ $PARAMS_START_Y + $PARAMS_DELTA_Y * 5 }
 
 		not_unlock
@@ -7776,7 +7776,7 @@ Screen "Game Params 2"  // PASSEMBLOSS
 
 			time 2
 			EvComm {
-				input_string	"ChecksInputStrID"        3
+				input_string	"ChecksInputStrID"        4
 				time		2
 			}
 		}
@@ -11609,7 +11609,7 @@ Screen "INet Host screen"
 
 	Object "Back Option"
 	{
-		x	{ $INet_Host_screen_Back_Option_PosX + 30 }
+		x	$INet_Host_screen_Back_Option_PosX
 		y	{ $HOST_START_Y + $HOST_DELTA_Y * 6 }
 
 		Element STRING {
@@ -11660,7 +11660,7 @@ Screen "INet Host screen"
 	}
 	Object "port with ok Option"
 	{
-		x	{ $INet_Host_screen_Ok_Option_PosX + 60 }
+		x	$INet_Host_screen_Port_iOption_PosX
 		y	{ $HOST_START_Y + $HOST_DELTA_Y * 6 }
 
 		Element STRING {
@@ -11713,7 +11713,7 @@ Screen "INet Host screen"
 	}
 	Object "Ok Option"
 	{
-		x	{ $INet_Host_screen_Ok_Option_PosX - 40 }
+		x	$INet_Host_screen_Ok_Option_PosX
 		y	{ $HOST_START_Y + $HOST_DELTA_Y * 6 }
 
 		Element STRING {

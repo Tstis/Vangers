@@ -181,7 +181,7 @@
 #define iSTR_LAN2			"ЛОКАЛЬНАЯ СЕТЬ"
 
 #define iSTR_INTERNET1			"Search"
-#define iSTR_INTERNET2			"Поиск сервера"
+#define iSTR_INTERNET2			"Поиск серверов"
 
 #define iSTR_CANT_CREATE1		"Can't create server..."
 #define iSTR_CANT_CREATE2		"Ошибка, слепок повреждён..."
@@ -321,7 +321,7 @@
 #define iSTR_One_at_a_time1		"One at a time:"
 #define iSTR_One_at_a_time2		"Максимум товара за раз:"
 
-#define iSTR_Checkpoints_Number1	"Checkpoints Number:"
+#define iSTR_Checkpoints_Number1	"Checkpoints:"
 #define iSTR_Checkpoints_Number2	"Число этапов:"
 
 #define iSTR_Unique_Mechos1		"Unique Mechos:"
@@ -427,7 +427,7 @@
 #define iSTR_ACHTUNG2			"ВНИМАНИЕ"
 
 #define iSTR_VANGERS_APPROACHING1	"VANGERS APPROACHING"
-#define iSTR_VANGERS_APPROACHING2	"Соеденяем с вашим Вангером"
+#define iSTR_VANGERS_APPROACHING2	"Соеденяем с Вашим Вангером"
 
 
 #define iSTR_Genesis1			"Genesis"
@@ -636,3 +636,25 @@
 #define iSTR_CurIP1			"Your IP:"
 #define iSTR_CurIP2			"Ваш IP:"
 
+
+#define iSTR_TITLE_AVTORS1		"MOD AUTHORS"
+#define iSTR_TITLE_AVTORS2		"АВТОРЫ СЛЕПКА"
+
+#define iSTR_1_AVTORS1		"Tstis[kiv]"
+#define iSTR_1_AVTORS2		"Tstis[kiv]"
+
+#define iSTR_2_AVTORS1		"xiada[kiv]"
+#define iSTR_2_AVTORS2		"xiada[kiv]"
+
+#define iSTR_3_AVTORS1		"Haedes[kiv]"
+#define iSTR_3_AVTORS2		"АИД[kiv]"
+
+
+#define iSTR_1b_AVTORS1		"Creator"
+#define iSTR_1b_AVTORS2		"Инф-Создатель"
+
+#define iSTR_2b_AVTORS1		"help with codding"
+#define iSTR_2b_AVTORS2		"Огромная помощь в работе с инф-кодом"
+
+#define iSTR_3b_AVTORS1		"help with codding"
+#define iSTR_3b_AVTORS2		"Не менее огромная помощь в инф-коде"
