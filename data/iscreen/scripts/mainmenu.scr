@@ -9447,8 +9447,6 @@ Screen "Server Info screen"
 Screen "Chat screen"
 {
 	screen_offs	0
-
-	block_global_obj
 	default_obj "Server Option"
 
 	Object "TitleStr"

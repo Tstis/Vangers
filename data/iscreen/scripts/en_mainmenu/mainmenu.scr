@@ -9164,8 +9164,6 @@ Screen "Server Info screen"
 Screen "Chat screen"
 {
 	screen_offs	0
-
-	block_global_obj
 	default_obj "Server Option"
 
 	Object "TitleStr"
@@ -11328,7 +11326,7 @@ Screen "INet Host screen"
 
 	Object "Back Option"
 	{
-		x	{ $INet_Host_screen_Back_Option_PosX + 80 }
+		x	{ $INet_Host_screen_Back_Option_PosX + 120 }
 		y	{ $HOST_START_Y + $HOST_DELTA_Y * 6 }
 
 		Element STRING {
@@ -11379,7 +11377,7 @@ Screen "INet Host screen"
 	}
 	Object "port with ok Option"
 	{
-		x	{ $INet_Host_screen_Ok_Option_PosX + 50 }
+		x	{ $INet_Host_screen_Ok_Option_PosX + 75 }
 		y	{ $HOST_START_Y + $HOST_DELTA_Y * 6 }
 
 		Element STRING {

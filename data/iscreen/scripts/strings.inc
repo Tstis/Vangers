@@ -266,7 +266,7 @@
 
 
 #define iSTR_SELECT_GAME1		"SELECT GAME"
-#define iSTR_SELECT_GAME2		"‘―¨α®ª „®αβγ―­λε £ΰ"
+#define iSTR_SELECT_GAME2		"‘―¨α®ª „®αβγ―­λε ¥¦¨¬®Ά"
 
 #define iSTR_Nascency1			"Nascency:"
 #define iSTR_Nascency2			"®¦¤¥­¨¥:"             // whats that? An artificial word -
@@ -344,7 +344,7 @@
 
 
 #define iSTR_IDENTIFICATION1		"IDENTIFICATION"
-#define iSTR_IDENTIFICATION2		"„…’”€–"
+#define iSTR_IDENTIFICATION2		"„…’”€–"
 
 #define iSTR_PASSWORD1			"PASSWORD"
 #define iSTR_PASSWORD2			"€‹"
@@ -552,7 +552,7 @@
 #define iSTR_MECHOSOMA2 		"…•‘€"
 
 #define iSTR_PASSEMBLOSS1		"PASSEMBLOSS"
-#define iSTR_PASSEMBLOSS2		"€‘‘…‹‘"
+#define iSTR_PASSEMBLOSS2		"€‘‘…‹‘‘"
 
 #define iSTR_HUNTAGE1			"HUNTAGE"
 #define iSTR_HUNTAGE2			"•€’‰„†"

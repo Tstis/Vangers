@@ -5703,7 +5703,7 @@ void aciLoadUVSList(XStream& fh,uvsActInt** p,int list_type)
 
 #define ACI_FRAG_ADDITIONAL_LINES_PASS 	1
 #define ACI_FRAG_ADDITIONAL_LINES 	4
-#define ACI_FRAG_TIMER		300
+#define ACI_FRAG_TIMER		375
 #define ACI_FRAG_FONT		0
 
 const unsigned ACI_FRAG_COL0	 = (252 | (246 << 8));
@@ -5764,9 +5764,9 @@ void aciShowFrags(void)
 				XBuf.init();
 				world_name = aScrDisp -> wMap -> world_ptr[aScrDisp -> wMap -> world_ids[p -> body.world]] -> name;
 				XBuf < p -> name < " (" < world_name < ") : " <= p -> body.kills < " " < aciSTR_KILLS < ", " <= p -> body.deaths < " " < aciSTR_DEATHS;
-				aScrDisp -> curPrompt -> add_str(i+4,(unsigned char*)XBuf.address());
-				aScrDisp -> curPrompt -> TimeBuf[i+4] = ACI_FRAG_TIMER;
-				aScrDisp -> curPrompt -> ColBuf[i+4] = fragColors[p -> body.color];
+				aScrDisp -> curPrompt -> add_str(i+ACI_FRAG_ADDITIONAL_LINES,(unsigned char*)XBuf.address());
+				aScrDisp -> curPrompt -> TimeBuf[i+ACI_FRAG_ADDITIONAL_LINES] = ACI_FRAG_TIMER;
+				aScrDisp -> curPrompt -> ColBuf[i+ACI_FRAG_ADDITIONAL_LINES] = fragColors[p -> body.color];
 			}
 			break;
 		case 1: // MECHOSOMA...
@@ -5790,9 +5790,9 @@ void aciShowFrags(void)
 				world_name = aScrDisp -> wMap -> world_ptr[aScrDisp -> wMap -> world_ids[p -> body.world]] -> name;
 				XBuf < p -> name < " : " < aciSTR_Ware1 < " " <= p -> body.MechosomaStat.ItemCount1 < "/" <= my_server_data.Mechosoma.ProductQuantity1;
 				XBuf < ", " < aciSTR_Ware2 < " " <= p -> body.MechosomaStat.ItemCount2 < "/" <= my_server_data.Mechosoma.ProductQuantity2 < ", " <= p -> body.kills < " " < aciSTR_KILLS < ", " <= p -> body.deaths < " " < aciSTR_DEATHS;
-				aScrDisp -> curPrompt -> add_str(i+4,(unsigned char*)XBuf.address());
-				aScrDisp -> curPrompt -> TimeBuf[i+4] = ACI_FRAG_TIMER;
-				aScrDisp -> curPrompt -> ColBuf[i+4] = fragColors[p -> body.color];
+				aScrDisp -> curPrompt -> add_str(i+ACI_FRAG_ADDITIONAL_LINES,(unsigned char*)XBuf.address());
+				aScrDisp -> curPrompt -> TimeBuf[i+ACI_FRAG_ADDITIONAL_LINES] = ACI_FRAG_TIMER;
+				aScrDisp -> curPrompt -> ColBuf[i+ACI_FRAG_ADDITIONAL_LINES] = fragColors[p -> body.color];
 			}
 			break;
 		case 2: // PASSEMBLOSS...
@@ -5812,9 +5812,9 @@ void aciShowFrags(void)
 				XBuf.init();
 				world_name = aScrDisp -> wMap -> world_ptr[aScrDisp -> wMap -> world_ids[p -> body.world]] -> name;
 				XBuf < p -> name < " (" < world_name < ") : " < aciSTR_Checkpoints < " " <= p -> body.PassemblossStat.CheckpointLighting < "/" <= my_server_data.Passembloss.CheckpointsNumber < ", " <= p -> body.deaths < " " < aciSTR_DEATHS;
-				aScrDisp -> curPrompt -> add_str(i+1,(unsigned char*)XBuf.address());
-				aScrDisp -> curPrompt -> TimeBuf[i+1] = ACI_FRAG_TIMER;
-				aScrDisp -> curPrompt -> ColBuf[i+1] = fragColors[p -> body.color];
+				aScrDisp -> curPrompt -> add_str(i+ACI_FRAG_ADDITIONAL_LINES_PASS,(unsigned char*)XBuf.address());
+				aScrDisp -> curPrompt -> TimeBuf[i+ACI_FRAG_ADDITIONAL_LINES_PASS] = ACI_FRAG_TIMER;
+				aScrDisp -> curPrompt -> ColBuf[i+ACI_FRAG_ADDITIONAL_LINES_PASS] = fragColors[p -> body.color];
 			}
 			break;
 	}
