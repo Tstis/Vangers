@@ -653,8 +653,8 @@
 #define iSTR_1b_AVTORS1		"Creator"
 #define iSTR_1b_AVTORS2		"Инф-Создатель"
 
-#define iSTR_2b_AVTORS1		"help with codding"
+#define iSTR_2b_AVTORS1		"help with coding"
 #define iSTR_2b_AVTORS2		"Огромная помощь в работе с инф-кодом"
 
-#define iSTR_3b_AVTORS1		"help with codding"
+#define iSTR_3b_AVTORS1		"help with coding"
 #define iSTR_3b_AVTORS2		"Не менее огромная помощь в инф-коде"
