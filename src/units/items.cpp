@@ -3748,7 +3748,7 @@ void GloryPlace::Init(int ind)
 	//shutle fostral
 	if (NetworkON && my_server_data.GameType == PASSEMBLOSS && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "shutle fostral") == 0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "челночный фострал")==0)) {
 		World = WORLD_FOSTRAL;
-		switch (ind) {
+		switch (ind % 44) {
 		case  0:	R_curr.x =  180;	R_curr.y = 1616;	break;
 		case  1:	R_curr.x =  550;	R_curr.y = 2260;	break;
 		case  2:	R_curr.x =   55;	R_curr.y = 3235;	break;
