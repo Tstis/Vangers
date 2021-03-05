@@ -747,7 +747,7 @@ void iPrepareOptions(void)
 	iScrOpt[iPROXY_SERVER] = new iScreenOption(iSTRING,0,"INet Host screen","ProxyServerName");
 	iScrOpt[iPROXY_PORT] = new iScreenOption(iSTRING,0,"INet Host screen","ProxyPortNum");
 
-	iScrOpt[iSERVER_PORT] = new iScreenOption(iSTRING,0,"Port screen","PortStrID");
+	iScrOpt[iSERVER_PORT] = new iScreenOption(iSTRING,0,"INet Host screen","PortStrID");
 
 	iScrOpt[iPROXY_SERVER_STR] = new iScreenOption(iSTRING,0,"INet Host screen","ProxyServerStrID");
 	iScrOpt[iPROXY_SERVER_STR] -> flags |= iOPTION_NO_SAVE;
@@ -765,8 +765,8 @@ void iPrepareOptions(void)
 	iScrOpt[iFULLSCREEN] = new iScreenOption(iTRIGGER,0,"Graphics screen","FullScreenTrig");
 	((iTriggerObject *)iScrOpt[iFULLSCREEN]->objPtr)->callback = &iSetFullscreen;
 
-	iScrOpt[iAUTO_ACCELERATION] = new iScreenOption(iTRIGGER,0,"Controls screen","AutoAccelerationTrig");
 	iScrOpt[iCYCLE_DOBA] = new iScreenOption(iTRIGGER,0,"Graphics screen","CycleDobaTrig");
+	iScrOpt[iAUTO_ACCELERATION] = new iScreenOption(iTRIGGER,0,"Controls screen","AutoAccelerationTrig");
 	iPrepareControls();
 }
 
