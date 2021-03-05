@@ -260,9 +260,9 @@
 #define INet_Host_screen_ProxyServerStr_PosX1	 160
 #define INet_Host_screen_ProxyTrg_PosX1  470
 #define INet_Host_screen_ProxyStr_PosX1  242
-#define INet_Host_screen_Ok_Option_PosX1 270
-#define INet_Host_screen_Port_iOption_PosX1	349
-#define INet_Host_screen_Back_Option_PosX1	 490
+#define INet_Host_screen_Ok_Option_PosX1 244
+#define INet_Host_screen_Port_iOption_PosX1	419
+#define INet_Host_screen_Back_Option_PosX1	 400
 #define INet_Host_screen_IP_Str_PosX1	280
 #define INet_Host_screen_IP_Addr_PosX1	420
 
@@ -274,9 +274,9 @@
 #define INet_Host_screen_ProxyServerStr_PosX2	 160
 #define INet_Host_screen_ProxyTrg_PosX2  490
 #define INet_Host_screen_ProxyStr_PosX2  241
-#define INet_Host_screen_Ok_Option_PosX2 194
-#define INet_Host_screen_Port_iOption_PosX2	294
-#define INet_Host_screen_Back_Option_PosX2	 450
+#define INet_Host_screen_Ok_Option_PosX2 244
+#define INet_Host_screen_Port_iOption_PosX2	414
+#define INet_Host_screen_Back_Option_PosX2	 400
 #define INet_Host_screen_IP_Str_PosX2	270
 #define INet_Host_screen_IP_Addr_PosX2	420
 

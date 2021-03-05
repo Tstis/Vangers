@@ -17,6 +17,10 @@
 #define iSTR_2b_AVTORS		$iSTR_2b_AVTORS1
 #define iSTR_3b_AVTORS		$iSTR_3b_AVTORS1
 
+#define iSTR_PROMOD0		$iSTR_PROMOD01	
+#define iSTR_PROMOD1		$iSTR_PROMOD11
+#define iSTR_MOREA		$iSTR_MOREA1
+
 #define iSTR_Options		$iSTR_Options1
 #define iSTR_GRAPHICS		$iSTR_GRAPHICS1
 #define iSTR_SOUND		$iSTR_SOUND1

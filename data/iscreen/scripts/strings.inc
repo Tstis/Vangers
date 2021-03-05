@@ -164,11 +164,11 @@
 #define iSTR_PLAYER_SETUP1		"PLAYER SETUP"
 #define iSTR_PLAYER_SETUP2		"€‘’’ ƒ€"
 
-#define iSTR_SERVER_PORT1		"PORT"
-#define iSTR_SERVER_PORT2		"’"
+#define iSTR_SERVER_PORT1		"PORT:"
+#define iSTR_SERVER_PORT2		"’:"
 
 #define iSTR_Default1			"RESTORE"
-#define iSTR_Default2			"‚‘‘’€‚’"
+#define iSTR_Default2			"‚…“’"
 
 #define iSTR_Server_Port1		"Server Port:"
 #define iSTR_Server_Port2		"®ΰβ α¥ΰΆ¥ΰ :"
@@ -265,7 +265,7 @@
 #define iSTR_RESTORE_ALL2		"‘‘’ ‚‘π"
 
 
-#define iSTR_SELECT_GAME1		"SELECT GAME"
+#define iSTR_SELECT_GAME1		"SELECT MODE"
 #define iSTR_SELECT_GAME2		"‘―¨α®ª „®αβγ―­λε ¥¦¨¬®Ά"
 
 #define iSTR_Nascency1			"Nascency:"
@@ -384,11 +384,11 @@
 #define iSTR_Chat_Room1 		"Chat Room"
 #define iSTR_Chat_Room2 		"— β"
 
-#define iSTR_SERVER_INFO1		"SERVER INFO"
+#define iSTR_SERVER_INFO1		"BACK"
 #define iSTR_SERVER_INFO2		"€‡€„"
 
 
-#define iSTR_HOST_NAME1 		"NAME:"
+#define iSTR_HOST_NAME1 		"SERVER NAME:"
 #define iSTR_HOST_NAME2 		"€„…‘ ‘…‚…€:"
 
 #define iSTR_Internet_Servers1		"Available servers"
@@ -658,3 +658,12 @@
 
 #define iSTR_3b_AVTORS1		"help with coding"
 #define iSTR_3b_AVTORS2		"¥ ¬¥­¥¥ ®£ΰ®¬­ ο ―®¬®ιμ Ά ¨­δ-ª®¤¥"
+
+#define iSTR_PROMOD01		"resource/iscreen/text/eng/promod0.txt"
+#define iSTR_PROMOD02		"resource/iscreen/text/rus/promod0.txt"
+
+#define iSTR_PROMOD11		"resource/iscreen/text/eng/promod1.txt"
+#define iSTR_PROMOD12		"resource/iscreen/text/rus/promod1.txt"
+
+#define iSTR_MOREA1		"MORE"
+#define iSTR_MOREA2		"„……"
