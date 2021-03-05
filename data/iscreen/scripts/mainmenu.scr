@@ -10691,15 +10691,15 @@ Screen "INet Host screen"
 	}
 	Object "TitleStr"
 	{
-		x	{ $INet_Host_screen_IP_Str_PosX - 105 }
-		y	{ $HOST_START_Y + $HOST_DELTA_Y * 2 }
+		x	{ $INet_Host_screen_IP_Str_PosX - 85 }
+		y	{ $HOST_START_Y + $HOST_DELTA_Y * 2 + 5 }
 
 		Element STRING {
 			align_x center
 
 			terrain_num	$TERRAIN2
 
-			font		0
+			font		3
 			null_level	$DEFAULT_NULL
 			string		$iSTR_SERVER_PORT
 		}
