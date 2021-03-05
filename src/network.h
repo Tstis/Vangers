@@ -7,6 +7,10 @@
 
 #define DEFAULT_SERVER_PORT	2197
 
+extern int is_start;
+extern int isRollcall;
+extern char* rollcallNicknames;
+
 extern double zMod_cycle;
 extern double zMod_flood_level_delta;
 

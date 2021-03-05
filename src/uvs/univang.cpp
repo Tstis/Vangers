@@ -54,6 +54,8 @@ extern iScreenOption** iScrOpt;
 const int TABUTASK_BAD = ACI_TABUTASK_FAILED;
 const int TABUTASK_GOOD = ACI_TABUTASK_SUCCESSFUL;
 
+int countFromCommand = 0;
+
 int RACE_WAIT =  300;
 int uvsKronActive = 0;
 int uvsVersion = 14;
@@ -75,6 +77,13 @@ extern int NetworkON;
 extern NetRndType NetRnd;
 extern int ChangeArmor;
 extern int dgAbortStatus;
+
+extern int is_start;
+int rollcallTime = 0;
+int rollcallNum = 0;
+
+extern int isRollcall;
+extern char* rollcallNicknames;
 
 void LoadingMessage(int flush = 0);
 void ChangeVanger(void);
@@ -590,7 +599,7 @@ void uniVangPrepare(void){
 			if (i == UVS_ITEM_TYPE::MACHOTINE_GUN_LIGHT ||
 			    i == UVS_ITEM_TYPE::SPEETLE_SYSTEM_LIGHT ||
 			    i == UVS_ITEM_TYPE::GHORB_GEAR_LIGHT ||
-			   (NetworkON && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"aibatr")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR()," ¨¡ âà")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"battle for hmok")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"¡¨â¢  §  å¬®ª")==0)))
+			   (NetworkON && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"aibatr")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"battle for hmok")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"ï¿½ï¿½â¢  ï¿½ï¿½ å¬®ï¿½")==0)))
 #endif
 				for( int j = 0; j < MAIN_WORLD_MAX; j++) WorldTable[j] -> generate_item( i );
 			else
@@ -601,7 +610,7 @@ void uniVangPrepare(void){
 #ifdef ALL_ITEM_IN_SHOP
 			for( int j = 0; j < MAIN_WORLD_MAX; j++) WorldTable[j] -> generate_item( i );
 #else
-			if (NetworkON && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"aibatr")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR()," ¨¡ âà")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"battle for hmok")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"¡¨â¢  §  å¬®ª")==0)) {
+			if (NetworkON && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"aibatr")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"battle for hmok")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(),"ï¿½ï¿½â¢  ï¿½ï¿½ å¬®ï¿½")==0)) {
                 		for( int j = 0; j < MAIN_WORLD_MAX; j++) WorldTable[j] -> generate_item(i);
 			}
 			else {
@@ -1061,6 +1070,30 @@ void uvsContimer::Quant(void){
 					uvsRestoreTabuTask();
 			}
 		}
+	}
+	
+	if (isRollcall==-1) {
+		rollcallTime = 0;
+	}
+	if (isRollcall>-1) {
+		rollcallTime++;
+		if (rollcallTime == 1)
+			rollcallNum = players_list.size();
+		if (isRollcall >= players_list.size()) {
+			message_dispatcher.send("[bot]> > > ‘’€’! > > >", MESSAGE_FOR_PLAYER, 0);
+			is_start = 7;
+			isRollcall=-1;
+		}
+		else if (isRollcall >= rollcallNum) {
+			message_dispatcher.send("[bot]> > > ‘’€’! > > >", MESSAGE_FOR_PLAYER, 0);
+			isRollcall = -1;
+			rollcallNicknames = new char[10000]();
+		}
+	}
+	
+	char *game_name = iScrOpt[iSERVER_NAME]->GetValueCHR();
+	if (NetworkON && is_start != 1 && is_start != 7 && countFromCommand != 0) {
+		countFromCommand=0;
 	}
 }
 
@@ -5361,6 +5394,11 @@ void uvsEscave::add_goods_to_shop( void ){ //znfo - Ð´Ð¾Ð±Ð°Ð²ÐºÐ° Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð
 //#endif
 
 	if (Pbunch -> status == UVS_BUNCH_STATUS::UNABLE) return;
+	
+	if (NetworkON && uvsGoodsON) {
+		GamerResult.phlegma_buy *= (int)(GamerResult.phlegma_buy < 0);
+		GamerResult.toxick_buy *= (int)(GamerResult.toxick_buy < 0);
+	}
 
 	while( pt ){
 		int k = 0;
@@ -5375,10 +5413,6 @@ void uvsEscave::add_goods_to_shop( void ){ //znfo - Ð´Ð¾Ð±Ð°Ð²ÐºÐ° Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð
 				case 26: n -= GamerResult.heroin_buy; break;
 				case 27: n -= GamerResult.shrub_buy; break;
 				case 28: n -= GamerResult.poponka_buy; break;
-			}
-			if (uvsGoodsON) {
-				GamerResult.phlegma_buy *= (int)(GamerResult.phlegma_buy < 0);
-				GamerResult.toxick_buy *= (int)(GamerResult.toxick_buy < 0);
 			}
 		} else {
 			n = 4 + RND(5) + 4;
@@ -5498,6 +5532,13 @@ void uvsSpot::add_goods_to_shop( void ){
 	uvsTradeItem *pt = (uvsTradeItem*)Ptrade;
 
 	if (Pworld -> escT[0] -> Pbunch -> status == UVS_BUNCH_STATUS::UNABLE) return;
+	
+	if (NetworkON && uvsGoodsON) {
+		GamerResult.nymbos_buy *= (int)(GamerResult.nymbos_buy < 0);
+		GamerResult.heroin_buy *= (int)(GamerResult.heroin_buy < 0);
+		GamerResult.shrub_buy *= (int)(GamerResult.shrub_buy < 0);
+		GamerResult.poponka_buy *= (int)(GamerResult.poponka_buy < 0);
+	}
 
 	while( pt ){
 		int k = 0;
@@ -5509,12 +5550,6 @@ void uvsSpot::add_goods_to_shop( void ){
 			switch (pt->type) {
 				case 25: n -= GamerResult.phlegma_buy; break;
 				case 29: n -= GamerResult.toxick_buy; break;
-			}
-			if (uvsGoodsON) {
-				GamerResult.nymbos_buy *= (int)(GamerResult.nymbos_buy < 0);
-				GamerResult.heroin_buy *= (int)(GamerResult.heroin_buy < 0);
-				GamerResult.shrub_buy *= (int)(GamerResult.shrub_buy < 0);
-				GamerResult.poponka_buy *= (int)(GamerResult.poponka_buy < 0);
 			}
 		} else {
 			n = 4 + RND(5) + 4;
