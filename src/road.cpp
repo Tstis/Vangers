@@ -2463,7 +2463,7 @@ void shotFlush(void)
 	static int curShotNumber;
 
 	XBuffer buf, out_buf;
-	buf < "Vangers: ";
+	buf < "Vangers_M4D_";
 	if(curShotNumber < 1000)
 		buf < "0";
 	if(curShotNumber < 100)
