@@ -99,7 +99,7 @@ extern int IsMainMenu;
 
 extern bool autoconnect;
 extern char *autoconnectHost;
-extern int  autoconnectPort;
+extern unsigned short  autoconnectPort;
 extern int  autoconnectJoinGame;
 extern int  autoconnectGameID;
 
@@ -1288,7 +1288,7 @@ void iScrQuantFinit(void)
 	static unsigned char pal_buf[768];
 	if(iScreenLog){
 		iFinitQuant();
-		set_key_nadlers(&KeyCenter, NULL);
+		set_key_handlers(&KeyCenter, NULL);
 
 		i_slake_pal(iscrPal,16);
 
