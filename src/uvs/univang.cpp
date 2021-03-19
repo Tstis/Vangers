@@ -1071,25 +1071,17 @@ void uvsContimer::Quant(void){
 			}
 		}
 	}
-	
-	if (isRollcall==-1) {
-		rollcallTime = 0;
-	}
-	if (isRollcall>-1) {
-		rollcallTime++;
-		if (rollcallTime == 1)
-			rollcallNum = players_list.size();
+//	char *start_message = "[bot]> > > �����! > > >";		//ПОЧЕМУ МНЕ ЭТО ПОДЧЁРКИВАЕТ ПРИ СБОРКЕ?
 		if (isRollcall >= players_list.size()) {
-			message_dispatcher.send("[bot]> > > �����! > > >", MESSAGE_FOR_PLAYER, 0);
+//			message_dispatcher.send(start_message, MESSAGE_FOR_PLAYER, 0);		//А точнее тут подчёркивало, когда чара не было.
 			is_start = 7;
 			isRollcall=-1;
 		}
 		else if (isRollcall >= rollcallNum) {
-			message_dispatcher.send("[bot]> > > �����! > > >", MESSAGE_FOR_PLAYER, 0);
+//			message_dispatcher.send(start_message, MESSAGE_FOR_PLAYER, 0);		//И тут подчёркивало.
 			isRollcall = -1;
 			rollcallNicknames = new char[10000]();
 		}
-	}
 	
 	char *game_name = iScrOpt[iSERVER_NAME]->GetValueCHR();
 	if (NetworkON && is_start != 1 && is_start != 7 && countFromCommand != 0) {
