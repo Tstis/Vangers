@@ -21,6 +21,7 @@
 
 #include <iostream>
 #include "../iscreen/iscreen_options.h"
+#include "../iscreen/iscreen.h"
 
 #ifdef _ROAD_
 //#define FILEMAPPING
@@ -58,6 +59,7 @@ extern const char* mapFName;
 extern int NetworkON;
 extern int zGameBirthTime;
 extern int CurrentWorld;
+extern iScreenOption** iScrOpt;
 
 /* --------------------------- PROTOTYPE SECTION --------------------------- */
 void restore(void);
@@ -624,6 +626,7 @@ void vrtMap::analyzeINI(const char* name)
 	const char* secRender = "Rendering Parameters";
 	const char* secPalette = "Dynamic Palette";
 	const char* secPaletteDoba = "Doba Cycle Dynamic Palette";
+	const char* secPaletteDobaEP = "Doba (eleepod bath) Cycle Dynamic Palette";
 	const char* secCreation = "Creation Parameters";
 
 	
@@ -676,7 +679,10 @@ void vrtMap::analyzeINI(const char* name)
 	}
 	
 	std::string palette_name = "Dynamic Palette";
-	if (iGetOptionValue(iCYCLE_DOBA)) {
+	if ((iGetOptionValue(iCYCLE_DOBA)) && (strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "eleepod bath")==0 || strcmp(iScrOpt[iSERVER_NAME]->GetValueCHR(), "баня элипода")==0)) {
+		palette_name = "Doba (eleepod bath) Cycle " + palette_name;
+	}
+	else if (iGetOptionValue(iCYCLE_DOBA)) {
 		palette_name = "Doba Cycle " + palette_name;
 	}
 
