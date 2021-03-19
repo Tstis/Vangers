@@ -145,19 +145,19 @@ int XGR_Screen::init(int x,int y,int flags_in)
 		}
 	}
 	std::cout<<"SDL_SetWindowTitle"<<std::endl;
-	SDL_SetWindowTitle(sdlWindow, "Vangers: M4D");
+	SDL_SetWindowTitle(sdlWindow, "Vangers");
 	
 	std::cout<<"Load and set icon"<<std::endl;
 #ifdef __APPLE__
 	IconSurface = SDL_LoadBMP("vangers_mac.bmp");
 #else
-	IconSurface = SDL_LoadBMP("vangers_M4D.bmp");
+	IconSurface = SDL_LoadBMP("vangers.bmp");
 #endif
 	if (IconSurface) {
 		SDL_SetWindowIcon(sdlWindow, IconSurface); 
 		SDL_FreeSurface(IconSurface);
 	} else {
-		std::cout<<"Can't load icon vangers_M4D.bmp"<<std::endl;
+		std::cout<<"Can't load icon vangers.bmp"<<std::endl;
 	}
 	std::cout<<"SDL_SetRenderDrawColor"<<std::endl;
 	SDL_SetRenderDrawColor(sdlRenderer, 0, 0, 0, 255);
@@ -2123,14 +2123,14 @@ void XGR_Mouse::InitPrompt(void)
 	}
 	if(flags & XGM_HICOLOR){
 		if(PromptFonBufSize < p -> textSizeX * p -> textSizeY * 2){
-			if(PromptFon) delete PromptFon;
+			if(PromptFon) delete[] PromptFon;
 			PromptFonBufSize = p -> textSizeX * p -> textSizeY * 2;
 			PromptFon = new char[PromptFonBufSize];
 		}
 	}
 	else {
 		if(PromptFonBufSize < p -> textSizeX * p -> textSizeY){
-			if(PromptFon) delete PromptFon;
+			if(PromptFon) delete[] PromptFon;
 			PromptFonBufSize = p -> textSizeX * p -> textSizeY;
 			PromptFon = new char[PromptFonBufSize];
 		}

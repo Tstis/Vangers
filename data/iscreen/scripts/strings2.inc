@@ -9,18 +9,6 @@
 #define iSTR_MAIN_MENU		$iSTR_MAIN_MENU2
 #define iSTR_HALL_OF_FAME	$iSTR_HALL_OF_FAME2
 
-#define iSTR_TITLE_AVTORS	$iSTR_TITLE_AVTORS2
-#define iSTR_1_AVTORS		$iSTR_1_AVTORS2
-#define iSTR_2_AVTORS		$iSTR_2_AVTORS2
-#define iSTR_3_AVTORS		$iSTR_3_AVTORS2
-#define iSTR_1b_AVTORS		$iSTR_1b_AVTORS2
-#define iSTR_2b_AVTORS		$iSTR_2b_AVTORS2
-#define iSTR_3b_AVTORS		$iSTR_3b_AVTORS2
-
-#define iSTR_PROMOD0		$iSTR_PROMOD02	
-#define iSTR_PROMOD1		$iSTR_PROMOD12
-#define iSTR_MOREA		$iSTR_MOREA2
-
 #define iSTR_Options		$iSTR_Options2
 #define iSTR_GRAPHICS		$iSTR_GRAPHICS2
 #define iSTR_SOUND		$iSTR_SOUND2
@@ -46,8 +34,6 @@
 #define iSTR_DISK_SPACE_IN_USE		$iSTR_DISK_SPACE_IN_USE2
 #define iSTR_CLEAN_UP			$iSTR_CLEAN_UP2
 
-#define iSTR_CYCLE_DOBA			$iSTR_CYCLE_DOBA2
-
 #define iSTR_Sound_Options		$iSTR_Sound_Options2
 #define iSTR_SOUND_EFFECTS		$iSTR_SOUND_EFFECTS2
 #define iSTR_MUSIC			$iSTR_MUSIC2
@@ -58,10 +44,19 @@
 #define iSTR_BACKGROUND_SOUND		$iSTR_BACKGROUND_SOUND2
 
 #define iSTR_Multiplayer		$iSTR_Multiplayer2
+#define iSTR_JOIN_SERVER		$iSTR_JOIN_SERVER2
+#define iSTR_CREATE_SERVER		$iSTR_CREATE_SERVER2
 #define iSTR_PLAYER_SETUP		$iSTR_PLAYER_SETUP2
+#define iSTR_Join_Server		$iSTR_Join_Server2
+
+#define iSTR_LAN			$iSTR_LAN2
 #define iSTR_INTERNET			$iSTR_INTERNET2
 #define iSTR_SERVER_PORT		$iSTR_SERVER_PORT2
 #define iSTR_Default			$iSTR_Default2
+#define iSTR_Server_Port		$iSTR_Server_Port2
+#define iSTR_CANT_CREATE		$iSTR_CANT_CREATE2
+
+#define iSTR_LAN_Servers		$iSTR_LAN_Servers2
 #define iSTR_UP 			$iSTR_UP2
 #define iSTR_DOWN			$iSTR_DOWN2
 #define iSTR_Update_List		$iSTR_Update_List2

@@ -66,7 +66,6 @@
 #include "iscreen/hfont.h"
 #include "iscreen/iscreen.h"
 #include "iscreen/controls.h"
-#include "iscreen/i_chat.h"
 #include "actint/actint.h"
 #endif
 
@@ -370,16 +369,21 @@ void showModal(char* fname, float reelW, float reelH, float screenW, float scree
 
 
 int xtInitApplication(void) {
-    XGraphWndID = "VANGERS: MORE FOR DEATH";
+    XGraphWndID = "VANGERS";
     char *tmp;
 
 #ifdef _DEMO_
     std::cout<<"\""<<XGraphWndID<<": One For The Road\" Cover Demo by K-D Lab (SDL Version)\n";
 #else
-    if (lang() == RUSSIAN) {
-        std::cout << "\"" << XGraphWndID << "\". ‚…‘ˆŸ 1.04, €’— 2 (19.03.2020)\n";
+    if (lang() == GERMAN) {
+        std::cout << "\"" << XGraphWndID << "\" by K-D Lab (SDL Version)\n";
+        std::cout << "Release (DE)\n";
+    } else if (lang() == RUSSIAN) {
+        std::cout << "\"" << XGraphWndID << "\" by K-D Lab (SDL Version)\n";
+        std::cout << "Release (RUS)\n";
     } else {
-        std::cout << "\"" << XGraphWndID << "\". VERSION 1.04, PATCH 2 (03.19.2020)\n";
+        std::cout << "\"" << XGraphWndID << ": One For The Road\" by K-D Lab (SDL Version)\n";
+        std::cout << "Release (ENG)\n";
     }
 #ifdef BETA_TESTING
     std::cout<<nVER<<"\n";
@@ -1610,7 +1614,6 @@ void KeyCenter(SDL_Event *key)
 //			shotFlush();
 //			break;
 #endif
-			break;
 		case SDL_SCANCODE_F:
 			mod = SDL_GetModState();
 			if (mod&KMOD_CTRL) {
@@ -1977,15 +1980,14 @@ void iGameMap::draw(int self)
 
 				zChat.init();
 				zChat < msg->message;
-				if (!iChatMUTE) {
-					zchatfont.draw(
-						xc-xside+80,
-						yc-yside+20+(zCHAT_ROWLIMIT*zCHAT_ROWHEIGHT)-(zCount*zCHAT_ROWHEIGHT),
-						(unsigned char*)(zChat.GetBuf()),
-						zColor, 
-						zCOLOR_TRANSPARENT
-					);
-				}
+				zchatfont.draw(
+					xc-xside+80,
+					yc-yside+20+(zCHAT_ROWLIMIT*zCHAT_ROWHEIGHT)-(zCount*zCHAT_ROWHEIGHT),
+					(unsigned char*)(zChat.GetBuf()),
+					zColor, 
+					zCOLOR_TRANSPARENT
+				);
+
 				if(msg == message_dispatcher.first()) break;
 				msg = (MessageElement*)msg->prev;
   			}
@@ -2463,7 +2465,7 @@ void shotFlush(void)
 	static int curShotNumber;
 
 	XBuffer buf, out_buf;
-	buf < "Vangers: ";
+	buf < "Vangers";
 	if(curShotNumber < 1000)
 		buf < "0";
 	if(curShotNumber < 100)
