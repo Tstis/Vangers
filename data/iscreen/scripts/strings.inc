@@ -155,12 +155,6 @@
 #define iSTR_Multiplayer1		"Multiplayer"
 #define iSTR_Multiplayer2		"Сетевая игра"
 
-#define iSTR_JOIN_SERVER1		"JOIN SERVER"
-#define iSTR_JOIN_SERVER2		"НАЙТИ СЕРВЕР"
-
-#define iSTR_CREATE_SERVER1		"CREATE SERVER"
-#define iSTR_CREATE_SERVER2		"ХОСТ"
-
 #define iSTR_PLAYER_SETUP1		"PLAYER SETUP"
 #define iSTR_PLAYER_SETUP2		"НАСТРОИТЬ ИГРОКА"
 
@@ -170,25 +164,8 @@
 #define iSTR_Default1			"RESTORE"
 #define iSTR_Default2			"ВЕРНУТЬ"
 
-#define iSTR_Server_Port1		"Server Port:"
-#define iSTR_Server_Port2		"Порт сервера:"
-
-#define iSTR_Join_Server1		"Join Server"
-#define iSTR_Join_Server2		"Где искать сервер?"
-
-
-#define iSTR_LAN1			"LAN"
-#define iSTR_LAN2			"ЛОКАЛЬНАЯ СЕТЬ"
-
 #define iSTR_INTERNET1			"Search"
 #define iSTR_INTERNET2			"Поиск серверов"
-
-#define iSTR_CANT_CREATE1		"Can't create server..."
-#define iSTR_CANT_CREATE2		"Ошибка, слепок повреждён..."
-
-
-#define iSTR_LAN_Servers1		"LAN Servers"
-#define iSTR_LAN_Servers2		"Локальные сервера"
 
 #define iSTR_UP1			"UP"
 #define iSTR_UP2			"ВВЕРХ"
@@ -266,7 +243,7 @@
 
 
 #define iSTR_SELECT_GAME1		"SELECT MODE"
-#define iSTR_SELECT_GAME2		"Список Доступных Режимов"
+#define iSTR_SELECT_GAME2		"ДОСТУПНЫЕ РЕЖИМЫ"
 
 #define iSTR_Nascency1			"Nascency:"
 #define iSTR_Nascency2			"Рождение:"             // whats that? An artificial word -
@@ -358,7 +335,7 @@
 #define iSTR_NAME21			"NAME:"
 #define iSTR_NAME22			"ИМЯ:"
 
-#define iSTR_GAME1			"GAME:"
+#define iSTR_GAME1			"MODE:"
 #define iSTR_GAME2			"РЕЖИМ:"
 
 
@@ -391,8 +368,8 @@
 #define iSTR_HOST_NAME1 		"SERVER NAME:"
 #define iSTR_HOST_NAME2 		"АДРЕС СЕРВЕРА:"
 
-#define iSTR_Internet_Servers1		"Available servers"
-#define iSTR_Internet_Servers2		"Доступные сервера"
+#define iSTR_Internet_Servers1		"Available games"
+#define iSTR_Internet_Servers2		"Список доступных игр"
 
 
 #define iSTR_Game_Results1		"Game Results"

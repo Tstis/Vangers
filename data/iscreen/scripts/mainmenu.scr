@@ -123,16 +123,13 @@
 #define NEW_GAME_Y		20
 
 #define LOAD_GAME_X		60
-#define LOAD_GAME_Y		165
+#define LOAD_GAME_Y		177
 
 #define OPTIONS_X		160
-#define OPTIONS_Y		245
-
-#define CREDITS_X		80
-#define CREDITS_Y		315
+#define OPTIONS_Y		257
 
 #define MULTIPLAYER_X		230
-#define MULTIPLAYER_Y		95
+#define MULTIPLAYER_Y		97
 
 #define MAIN_FNT		1
 
